@@ -89,6 +89,7 @@ Responsibilities:
 # 🏗 Project Structure
 
 ```bash
+
 robot_simulation_project/
 │
 ├── my_robot_description/
@@ -99,6 +100,8 @@ robot_simulation_project/
 ├── my_robot_bringup/
 │   ├── launch/
 │   └── worlds/
+│
+├── maps/
 │
 ├── build/
 ├── install/
