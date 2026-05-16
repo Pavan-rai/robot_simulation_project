@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <gazebo reference="base_link">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+
+    <gazebo reference="right_wheel_link">
+        <material>Gazebo/Gray</material>
+    </gazebo>
+
+    <gazebo reference="left_wheel_link">
+        <material>Gazebo/Gray</material>
+    </gazebo>
+
+    <gazebo reference="caster_wheel_link">
+        <material>Gazebo/Gray</material>
+    </gazebo>
+
+    <!-- FIXED Diff Drive Plugin -->
+    <gazebo>
+      <plugin
+        filename="gz-sim-diff-drive-system"
+        name="gz::sim::systems::DiffDrive">
+
+        <left_joint>base_left_wheel_joint</left_joint>
+        <right_joint>base_right_wheel_joint</right_joint>
+
+        <wheel_separation>0.45</wheel_separation>
+        <wheel_radius>0.1</wheel_radius>
+
+        <topic>/model/my_robot/cmd_vel</topic>
+
+      </plugin>
+    </gazebo>
+
+</robot>
