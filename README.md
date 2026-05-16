@@ -15,6 +15,11 @@ The project includes:
 - Modular package structure for scalability
 
 ---
+# 🎥 Demo
+
+## Live Demo Video
+
+
 
 ## Tech Stack
 
@@ -81,3 +86,40 @@ cd ~/robot_simulation_project
 colcon build
 source install/setup.bash
 ros2 launch my_robot_bringup my_robot_gazebo.launch.xml
+
+# 🎮 Robot Control
+
+Move the robot manually using ROS2 topic publishing:
+
+Forward motion:
+
+```bash
+ros2 topic pub /cmd_vel geometry_msgs/msg/Twist "{linear: {x: 2.0}}"
+```
+
+Rotate robot:
+
+```bash
+ros2 topic pub /cmd_vel geometry_msgs/msg/Twist "{angular: {z: 1.0}}"
+```
+
+Move and turn simultaneously:
+
+```bash
+ros2 topic pub /cmd_vel geometry_msgs/msg/Twist "{linear:{x:1.0},angular:{z:0.5}}"
+```
+
+Stop robot:
+
+```bash
+ros2 topic pub /cmd_vel geometry_msgs/msg/Twist "{}"
+
+
+# 👨‍💻 Author
+
+**Pavan Rai**
+
+GitHub: https://github.com/Pavan-rai
+
+If you found this useful, consider giving the repository a ⭐
+```
